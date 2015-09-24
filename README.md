@@ -5,10 +5,12 @@ library(dplyr)
 X_train <- read.table(file = "UCI HAR Dataset/train/X_train.txt", sep = "")
 y_train <- read.table(file = "UCI HAR Dataset/train/y_train.txt", sep = "")
 subject_train <- read.table(file = "UCI HAR Dataset/train/subject_train.txt", sep = "")
+
 ## test
 X_test <- read.table(file = "UCI HAR Dataset/test/X_test.txt", sep = "")
 y_test <- read.table(file = "UCI HAR Dataset/test/y_test.txt", sep = "")
 subject_test <- read.table(file = "UCI HAR Dataset/test/subject_test.txt", sep = "")
+
 ## features labels and activity labels
 features <- read.table(file = "UCI HAR Dataset/features.txt", sep = "")
 activity_labels <- read.table(file = "UCI HAR Dataset/activity_labels.txt", sep = "")
@@ -16,6 +18,7 @@ activity_labels <- read.table(file = "UCI HAR Dataset/activity_labels.txt", sep 
 ######################################################################
 # 1 .Merges the training and the test sets to create one data set.
 ######################################################################
+
 X<-rbind(X_train,X_test)
 y<-rbind(y_train,y_test)
 subject<-rbind(subject_train,subject_test)
