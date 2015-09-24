@@ -25,18 +25,15 @@ subject<-rbind(subject_train,subject_test)
 
 
 ######################################################################
-# 2 .Extracts only the measurements on the mean and standard 
-#    deviation for each measurement. 
+# 2 .Extracts only the measurements on the mean and standard deviation for each measurement. 
 ######################################################################
 mean_vector<-apply(X,2,mean)
 sd_vector<-apply(X,2,sd)
 
 
 ######################################################################
-# 3 .Uses descriptive activity names to name the activities in 
-#    the data set
-# 4 .Appropriately labels the data set with descriptive variable 
-#    names. 
+# 3 .Uses descriptive activity names to name the activities in the data set
+# 4 .Appropriately labels the data set with descriptive variable names. 
 ######################################################################
 
 y_new<-merge(y,activity_labels)
@@ -50,9 +47,7 @@ names(subject)<-"subject"
 names(y_new)<-c("Activity","Activity_Description")
 
 ######################################################################
-# 5 .From the data set in step 4, creates a second, independent 
-#    tidy data set with the average of each variable for each 
-#    activity and each subject.
+# 5 .From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 ######################################################################
 
 
